@@ -11,8 +11,6 @@ select
     `user_id`,                                              -- string
     `jurisdiction`,                                         -- string
     `level`,                                                -- string
-    `event_timestamp`,                                      -- timestamp
-    current_timestamp() as `min_data_last_updated_at`,           -- timestamp
-    current_timestamp() as `max_data_last_updated_at`           -- timestamp
+    `event_timestamp`                                      -- timestamp
 from
     {{ source('demo', 'user_level_event') }}

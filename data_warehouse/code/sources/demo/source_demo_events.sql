@@ -11,8 +11,6 @@ select
     `id`,                                                   -- int64
     `event_timestamp`,                                      -- timestamp
     `user_id`,                                              -- string
-    `event_name`,                                           -- string
-    current_timestamp() as `min_data_last_updated_at`,           -- timestamp
-    current_timestamp() as `max_data_last_updated_at`           -- timestamp
+    `event_name`                                          -- string
 from
     {{ source('demo', 'events') }}

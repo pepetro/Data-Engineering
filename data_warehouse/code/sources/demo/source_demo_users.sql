@@ -8,8 +8,6 @@
                below as it may be overwritten at any time.
 */
 select
-    `user_id`,                                              -- string
-    current_timestamp() as `min_data_last_updated_at`,           -- timestamp
-    current_timestamp() as `max_data_last_updated_at`           -- timestamp
+    `user_id`                                              -- string
 from
     {{ source('demo', 'users') }}

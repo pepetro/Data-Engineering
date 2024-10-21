@@ -13,8 +13,6 @@ select
     `user_id`,                                              -- string
     `amount`,                                               -- float64
     `currency`,                                             -- string
-    `tx_status`,                                            -- string
-    current_timestamp() as `min_data_last_updated_at`,           -- timestamp
-    current_timestamp() as `max_data_last_updated_at`           -- timestamp
+    `tx_status`                                            -- string
 from
     {{ source('demo', 'deposits') }}
