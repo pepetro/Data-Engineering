@@ -6,7 +6,7 @@ This repository maintains the standard `dbt` structure.
 
 - **`macros`**: This folder contains Jinja based templates to support the standardization of the repository build.  It include common patterns for naming conventions, calculations, and database standards.
 - **`models`**: This folder contains the complete set of "calculated" entities build, loaded, and physically persisted as tables via SQL. They include three major areas:
-   - `transformation`: area utilizing business logic and conversion from the raw source into valuable data
+   - `transformation (or staging)`: area utilizing business logic and conversion from the raw source into valuable data
       - Executions
       - Reshape, Rename, Recast
       - Enrich (Business Logic)
