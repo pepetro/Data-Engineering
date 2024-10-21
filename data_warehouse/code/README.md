@@ -34,6 +34,7 @@ This repository maintains the standard `dbt` structure.
 
 ### *Extended Directories*
 - **models/transformation or relational or dimensional/tables** : This folder contains **sample data** from models built at every layer (transformation, relational and dimensional)
+- **sources/tables** : This folder contains **sample data** for the tables integration from Data Lake to Data Warehouse
 - **answers** : Contains the queries in txt format (one file per query) and results that were run to cover the following questions:
   - Query 1 - How many users were active on a given day (they made a deposit or withdrawal)
   - Query 2 - Identify users haven't made a deposit
