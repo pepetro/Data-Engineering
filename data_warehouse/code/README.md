@@ -43,3 +43,58 @@ This repository maintains the standard `dbt` structure.
   - Query 6 - Number of unique currencies deposited on a given day
   - Query 7 - Number of unique currencies withdrew on a given day
   - Query 8 - Total amount deposited of a given currency on a given day
+
+## Development Standards
+### Keyword Consistencies
+All keywords need to be lower case. Additionally, this should not be Pascal Case, Camel Case, or 
+any combination of the aforementioned casings:
+
+```sql
+select
+    `attribute`
+from
+    ...
+```
+### Naked References
+Use BigQuery ticks ( `` ) around your schemas, entities, objects, and attributes - this clearly designates the 
+difference between database objects and keywords:
+
+```sql
+SELECT
+    `attribute`
+FROM
+    `schema`.table_name`
+```
+### Use of Aliases
+Using aliases not only it allows for better readability, it allows for easier authoring. 
+While it is very common to use some form of mnemonic device, i.e. `od` for OrderDetails , that recall mechanism might 
+not be easy for the next developer to review/update, if the query has a series of common 
+table expressions, sub-queries, and/or recursio, start with a and move to z .
+
+```sql
+SELECT
+    a.`OrderNumber`,
+    b.`OrderQuantity`
+FROM
+    `public`.`Order` a
+INNER JOIN
+    `public`.`OrderDetail` b ON a.`OrderID`= b.`OrderID`
+WHERE
+    a.`OrderDate` >= getdate()
+```
+### Leading Commas
+Commas need to trail attribute names BEFORE the return is in place. While placing the comma before the attribute can 
+be handy when debugging, developing, hacking, and/or troubleshooting, it is not appropriate for production code. 
+When writing, a comma, a return, and a semicolon signal the end of something, not the beginning. This makes it easier 
+for future developers to 'pick up' production code, and it enhances its readability.
+
+```sql
+SELECT
+     a.`attrbute_1`,
+     a.`attrbute_2`,
+     ...
+FROM
+    `schema`.`table_name` AS a
+WHERE
+    ...
+```
