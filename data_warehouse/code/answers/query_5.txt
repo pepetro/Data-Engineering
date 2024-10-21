@@ -1,12 +1,13 @@
 ## Query 5 - How many times a user has made a login between two dates
 select 
-  user_id,
-  count(*) as num_logins
+	a.`user_id`,
+	count(*) as `num_logins`
 from
-  `andela-data-warehouse-dev.dimensional_pep.dimensional_bitso_user_event`
+	dimensional_bitso_user_event as a
 where 
-  event_name in ('login_api', '2falogin', 'login') and -- Assumed these are the login-type events
-  event_date_id between 20220401 and 20220930 -- Dummy dates
+	a.`event_name` in ('login_api', '2falogin', 'login') and -- Assumed these are the login-type events
+	a.`event_date_id` between 20220401 and 20220930 -- Dummy dates
 group by
-  user_id
-order by num_logins desc
+	a.`user_id`
+order by 
+	a.`num_logins` desc

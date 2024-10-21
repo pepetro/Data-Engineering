@@ -1,8 +1,8 @@
 ## Query 4 - When was the last time a user made a login
 select 
-  user_id,
-  last_login_date_id
+	a.`user_id`,
+	a.`last_login_date_id`
 from
-  dimensional_bitso_user
-
-where last_login_date_id is not null
+	dimensional_bitso_user as a
+where 
+	a.`last_login_date_id` is not null

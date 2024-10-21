@@ -1,19 +1,19 @@
 ## Query 8 - Total amount deposited of a given currency on a given day
 select
-  a.event_date_id,
-  sum(a.amount) as total_amount,
-  b.currency
+	a.`event_date_id`,
+	sum(a.`amount`) as `total_amount`,
+	b.`currency`
 from
-  `andela-data-warehouse-dev.dimensional_pep.dimensional_bitso_tx` as a
+	dimensional_bitso_tx as a
 left join
-  `andela-data-warehouse-dev.relational_pep.relational_bitso_currency` as b using(currency_id)
+	relational_bitso_currency as b using(`currency_id`)
 where 
-  type="deposit" and 
-  status="complete"
+	a.`type`="deposit" and 
+	a.`status`="complete"
 group by 
-  event_date_id,
-  b.currency
+	a.`event_date_id`,
+	b.`currency`
 order by 
-  event_date_id desc,
-  b.currency desc,
-  sum(amount) desc
+	a.`event_date_id` desc,
+	b.`currency` desc,
+	sum(a.`amount`) desc
