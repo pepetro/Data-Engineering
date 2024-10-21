@@ -1,5 +1,14 @@
 ## Query 1 - How many users were active on a given day (they made a deposit or withdrawal)
-select *
-from
-  dimensional_bitso_user_platform_activity
+select
+  a.`event_date_id`,
+  count(distinct(case when type = "deposit" then a.`user_id`end)) as `total_unique_deposit_users`,
+  count(distinct(case when type = "withdraw" then a.`user_id`end)) as `total_unique_withdraw_users`,
+  count(distinct a.`user_id`) as `total_unique_users`
+from 
+  dimensional_bitso_tx` as a
+where a.`status` = "complete"
+group by 
+  a.`event_date_id`
+order by 
+  a.`event_date_id` desc
   
