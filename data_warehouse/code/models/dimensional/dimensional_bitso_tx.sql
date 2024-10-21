@@ -39,3 +39,9 @@ select
     a.`status`
 from
   `base` as a
+left join
+    {{ ref('relational_bitso_user') }} as b using(`user_id`)
+left join
+    {{ ref('relational_bitso_currency') }} as c using(`currency_id`)
+inner join
+    {{ ref('relational_bitso_calendar') }} as d on a.`event_date_id` = d.`calendar_id`
