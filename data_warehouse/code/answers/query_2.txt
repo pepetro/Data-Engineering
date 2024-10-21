@@ -1,0 +1,6 @@
+## Query 2 -  Identify users haven't made a deposit
+select 
+  user_id
+from
+  dimensional_bitso_user
+where user_made_deposit is false

@@ -1,0 +1,8 @@
+## Query 4 - When was the last time a user made a login
+select 
+  user_id,
+  last_login_date_id
+from
+  dimensional_bitso_user
+
+where last_login_date_id is not null

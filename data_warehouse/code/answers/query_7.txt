@@ -1,0 +1,14 @@
+## Query 7 Number of unique currencies withdrew on a given day
+select
+  event_date_id,
+  count(distinct currency_id) as num_currencies
+from
+  `andela-data-warehouse-dev.dimensional_pep.dimensional_bitso_tx`
+where 
+  type="withdraw" and 
+  status="complete"
+group by 
+  event_date_id
+order by 
+  event_date_id desc,
+  count(distinct currency_id) desc

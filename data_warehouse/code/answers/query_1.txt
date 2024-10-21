@@ -1,0 +1,5 @@
+## Query 1 -  How many users were active on a given day (they made a deposit or withdrawal)
+select *
+from
+  dimensional_bitso_user_platform_activity
+  

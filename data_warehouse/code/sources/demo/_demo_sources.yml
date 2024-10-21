@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: demo
+    database: andela-data-lake-dev
+    schema: demo
+    tables:
+      - name: deposits
+        meta:
+          change hash: d445ccd95d07220d6c9ce020f470f2c2
+          created date: '2024-10-17'
+          updated date: '2024-10-17'
+      - name: events
+        meta:
+          change hash: 4247bf7d1a140d4b2bdf483d5e5e7c4c
+          created date: '2024-10-17'
+          updated date: '2024-10-17'
+      - name: user_level_event
+        meta:
+          change hash: 61488a3fe0f2fce2ef3694876841f9e6
+          created date: '2024-10-17'
+          updated date: '2024-10-17'
+      - name: users
+        meta:
+          change hash: 4862fa60cef90ff8a76843e4a5c78b4e
+          created date: '2024-10-17'
+          updated date: '2024-10-17'
+      - name: withdrawals
+        meta:
+          change hash: d463ed9e75d6ecc389d8427eb9e7bf9a
+          created date: '2024-10-17'
+          updated date: '2024-10-17'
