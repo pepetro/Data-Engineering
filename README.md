@@ -1,6 +1,6 @@
-# Bitso
+# Data Engineering
 
-<h2>DE Manager</h2>
+<h2>Manager role</h2>
 
 This repository maintains the following structure.
 
@@ -8,7 +8,7 @@ This repository maintains the following structure.
 
 - [**`data_lake`**](https://github.com/pepetro/bitso/tree/main/data_lake): This folder contains 
   - [**images**](https://github.com/pepetro/bitso/tree/main/data_lake/images): Screenshoots of the GCP infrastructure use to handle inbound data (Bucket, Composer, Airflow instance)
-  - [**inbound**](https://github.com/pepetro/bitso/tree/main/data_lake/inbound): Python 3 scripts used to ETL data into Data Lake leveraging Ariflow for orchestration
+  - [**inbound**](https://github.com/pepetro/bitso/tree/main/data_lake/inbound): Python 3 scripts used to ETL data into Data Lake leveraging Airflow for orchestration
 - [**`data_warehouse`**](https://github.com/pepetro/bitso/tree/main/data_warehouse/code): This folder contains the complete set of "calculated" entities build, loaded, and physically persisted as tables via SQL. They include three major areas:
    - `answers`: SQL files with the queries that will answer the cases TXT sample output
    - `macros`: Jinja macro used for modelling
@@ -23,4 +23,4 @@ This repository maintains the following structure.
       - **dags_to_final_tables.png** - Visual representation of the DAGs to reach the final tables
       - **Data_Modeling.pptx** - PPT explaining what modeling techniques did you use, why did you choose them pros and cons
 - [**`files`**]():
-  - Files provided by Bitso
+  - Source Files provided.
