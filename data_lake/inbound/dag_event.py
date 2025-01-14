@@ -7,7 +7,7 @@ from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmpt
 # Define GCP variables
 GCS_BUCKET = 'bucket'
 GCS_OBJECT_PATH = 'data/event_sample_data.csv'  # Path to the CSV file
-BQ_PROJECT_ID = 'data-lake-dev'
+BQ_PROJECT_ID = 'data-lake'
 BQ_DATASET_NAME = 'demo'
 BQ_TABLE_NAME = 'events'
 
