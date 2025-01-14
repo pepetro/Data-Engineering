@@ -1,6 +1,4 @@
-# Bitso
-
-<h2>DE Manager</h2>
+# Onboarding Squad 
 
 This repository maintains the following structure.
 
