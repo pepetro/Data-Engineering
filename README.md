@@ -7,7 +7,6 @@ This repository maintains the following structure.
 ### *Folders*
 
 - [**`data_lake`**](https://github.com/pepetro/bitso/tree/main/data_lake): This folder contains 
-  - [**images**](https://github.com/pepetro/bitso/tree/main/data_lake/images): Screenshoots of the GCP infrastructure use to handle inbound data (Bucket, Composer, Airflow instance)
   - [**inbound**](https://github.com/pepetro/bitso/tree/main/data_lake/inbound): Python 3 scripts used to ETL data into Data Lake leveraging Ariflow for orchestration
 - [**`data_warehouse`**](https://github.com/pepetro/bitso/tree/main/data_warehouse/code): This folder contains the complete set of "calculated" entities build, loaded, and physically persisted as tables via SQL. They include three major areas:
    - `answers`: SQL files with the queries that will answer the cases TXT sample output
