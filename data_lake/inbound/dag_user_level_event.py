@@ -7,10 +7,10 @@ from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmpt
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 
 # Define GCP variables
-GCS_BUCKET = 'andela-data-lake-composer-pep-dev-composer-bucket'
+GCS_BUCKET = 'bucket'
 GCS_SOURCE_OBJECT_PATH = 'data/user_level_sample_data.csv'
 GCS_OBJECT_PATH = 'data/user_level_sample_data_filtered.csv'
-BQ_PROJECT_ID = 'andela-data-lake-dev'
+BQ_PROJECT_ID = 'data-lake'
 BQ_DATASET_NAME = 'demo'
 BQ_TABLE_NAME = 'user_level_event'
 
