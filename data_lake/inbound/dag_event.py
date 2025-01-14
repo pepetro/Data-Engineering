@@ -5,9 +5,9 @@ from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmpt
 from airflow.providers.google.cloud.operators.bigquery import BigQueryCreateEmptyDatasetOperator
 
 # Define GCP variables
-GCS_BUCKET = 'andela-data-lake-composer-pep-dev-composer-bucket'
+GCS_BUCKET = 'bucket'
 GCS_OBJECT_PATH = 'data/event_sample_data.csv'  # Path to the CSV file
-BQ_PROJECT_ID = 'andela-data-lake-dev'
+BQ_PROJECT_ID = 'data-lake-dev'
 BQ_DATASET_NAME = 'demo'
 BQ_TABLE_NAME = 'events'
 
