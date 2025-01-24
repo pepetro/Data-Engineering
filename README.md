@@ -19,5 +19,4 @@ This repository maintains the following structure.
       - **Proposed_High_Level_Architectrure.pdf** - Visual representation of the proposed DWH/Data Lake architecture
       - **dags_to_final_tables.png** - Visual representation of the DAGs to reach the final tables
       - **Data_Modeling.pptx** - PPT explaining what modeling techniques did you use, why did you choose them pros and cons
-- [**`files`**]():
-  - Files provided by Bitso
+- [**`files`**]()
